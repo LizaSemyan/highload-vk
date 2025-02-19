@@ -23,6 +23,7 @@
 - В среднем активный пользователь подписан на 121 сообщество [^11]
 - 68% пользователей смотрят контент в ленте [^11]
 - 64% пользователей смотрят контент в сообществах [^11]
+- Средний Visibility Rate на пост в 2024-м — 17,27% [^13]
 
 ### Веб-трафик по странам 
 
@@ -69,3 +70,5 @@
 [^11]: [Исследование трендов ВКонтакте](https://vk.com/press/trends-2024)
 
 [^12]: [Исследование brand analytics](https://brandanalytics.ru/blog/social-media-russia-autumn-2024)
+
+[^13]: [Независимое исследование ВКонтакте от «Студии Чижова», LiveDune и TargetHunter](https://targethunter.ru/blog/bolshoe-nezavisimoe-issledovanie-vkontakte-2024-reklama-ohvaty-vovlechennost/?ysclid=m7c68zp3a6795536690)
