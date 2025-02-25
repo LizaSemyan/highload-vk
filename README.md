@@ -30,10 +30,6 @@
 
 [![Traffic by Country](img/countries.jpeg)](https://www.similarweb.com/ru/website/vk.com/#overview) [^1]
 
-### Демографические показатели аудитории
-
-[![Demography](img/demography.jpeg)](https://www.similarweb.com/ru/website/vk.com/#overview) [^1]
-
 ### MVP
 
 **Ключевой функционал** - просмотр новостной ленты пользователя
