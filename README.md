@@ -200,7 +200,7 @@
 - Екатеринбург
 - Красноярск
 
-[![Data centers](img/data_centers.png)]
+![Data centers](img/data_centers.png)
 
 ### Расчет распределения запросов
 
