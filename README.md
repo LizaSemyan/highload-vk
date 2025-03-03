@@ -181,6 +181,8 @@
 
 Исходя из карты распределения плотности населения РФ [^19], наибольшая плотность населения наблюдается в европейской части РФ. Следовательно наибольшая часть датацентров должны располагаться в европейской части РФ.
 
+[![Population density](img/population.PNG)](https://www.yaklass.ru/p/geografiya/8-klass/naselenie-rossiiskoi-federatcii-6828521/plotnost-i-razmeshchenie-naseleniia-6861455/re-66ba7fe7-4b4f-4a1c-bb65-2b0d3df04898?ysclid=m7sr725fym43469354) [^19]
+
 <a name="sources"></a>
 ## Список источников
 
