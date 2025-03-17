@@ -361,6 +361,8 @@
 
 ### ERD диаграмма
 
+Ссылка на диаграмму: [https://dbdiagram.io/d/67d8308575d75cc8446260fb](https://dbdiagram.io/d/67d8308575d75cc8446260fb)
+
 ![ERD diagram](img/erd.png)
 
 <a name="sources"></a>
