@@ -382,6 +382,32 @@
 | **comment**       | Хранит комментарии пользователей под постами. Связывает пользователя с постом через user_id и post_id |
 | **recommendation**| Хранит информацию о рекомендациях, выставленных для постов для пользователя. Связывает пользователя с постом через user_id и post_id. Оценка (score) - числовое значением, отражающим степень рекомендации, основанное на сборе статистики действий пользователя |
 
+### Размер данных
+
+Размер сущности рассчитывается по следующим типам данных:
+
+- UUID: 16 байт
+- VARCHAR(n): n байт - будем учитывать максимально допустимый размер
+- TEXT: может быть переменной длины, примем как среднее 250 байт
+- TIMESTAMP: 8 байт
+- FLOAT: 4 байта
+
+| **Название таблицы**          | **Размер одной сущности (байт)**                                           | **Пояснение** |
+|----------------------|---------------------------------------------------------------------|-------------|
+| **user**             | 1 827 | 16 - UUID, 255 - username, 255 - email, 20 - phone_number, 255 - password_hash, 255 - avatar_url, 255 - cover_url, 8 - last_online_at, 250 - about, 250 - status, 8 - created_at |
+| **post**             | 816 | 16 - id, 16 - author_id, 16 - community_id, 250 - content, 255 - image_url, 255 - video_url, 8 - created_at |
+| **friend**           | 60 | 16 - user_id, 16 - friend_id, 20 - status, 8 - created_at  |
+| **friend_request**   | 60 | 16 - sender_id, 16 - receiver_id, 20 - status, 8 - sent_at |
+| **friend_request_status** | 270 | 20 - status, 250 - description                         |
+| **user_activity**    | 90  | 16 - id, 16 - user_id, 50 - activity_type, 8 - created_at  |
+| **activity_type**    | 300 | 50 - type, 250 - description                            |
+| **community**        | 1 055  | 16 - id, 255 - name, 250 - description, 16 - owner_id, 255 - avatar_url, 255 - cover_url, 8 - created_at |
+| **community_member** | 40  | 16 - community_id, 16 - user_id, 8 - joined_at           |
+| **like**             | 56  | 16 - id, 16 - user_id, 16 - post_id, 8 - created_at      |
+| **comment**          | 306  | 16 - id, 16 - user_id, 16 - post_id, 250 - content, 8 - created_at |
+| **recommendation**   | 60  | 16 - id, 16 - user_id, 16 - post_id, 4 - score, 8 - created_at |
+
+
 <a name="sources"></a>
 ## Список источников
 
