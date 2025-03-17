@@ -393,21 +393,21 @@
 - TIMESTAMP: 8 байт
 - FLOAT: 4 байта
 
-| **Название таблицы**          | **Размер одной сущности (байт)**                                           | **Пояснение** |
-|----------------------|---------------------------------------------------------------------|-------------|
-| **user**             | 1 827 | 16 - UUID, 255 - username, 255 - email, 20 - phone_number, 255 - password_hash, 255 - avatar_url, 255 - cover_url, 8 - last_online_at, 250 - about, 250 - status, 8 - created_at |
-| **post**             | 561 | 16 - id, 16 - author_id, 16 - community_id, 250 - content, 255 - video_url, 8 - created_at |
-| **friend**           | 40 | 16 - user_id, 16 - friend_id, 8 - created_at  |
-| **friend_request**   | 60 | 16 - sender_id, 16 - receiver_id, 20 - status, 8 - sent_at |
-| **friend_request_status** | 270 | 20 - status, 250 - description                         |
-| **user_activity**    | 90  | 16 - id, 16 - user_id, 50 - activity_type, 8 - created_at  |
-| **activity_type**    | 300 | 50 - type, 250 - description                            |
-| **community**        | 1 055  | 16 - id, 255 - name, 250 - description, 16 - owner_id, 255 - avatar_url, 255 - cover_url, 8 - created_at |
-| **community_member** | 40  | 16 - community_id, 16 - user_id, 8 - joined_at           |
-| **like**             | 56  | 16 - id, 16 - user_id, 16 - post_id, 8 - created_at      |
-| **comment**          | 306  | 16 - id, 16 - user_id, 16 - post_id, 250 - content, 8 - created_at |
-| **recommendation**   | 60  | 16 - id, 16 - user_id, 16 - post_id, 4 - score, 8 - created_at |
-| **photo**            | 311  | 16 - id, 16 - user_id, 16 - post_id, 8 - uploaded_at, 255 - url |
+| **Название таблицы**          | **Размер одной сущности (байт)**                                           | **Пояснение** | **Всего строк** | **Размер таблицы** |
+|-------------------------------|----------------------------------------------------------------------------|---------------|-----------------|--------------------|
+| **user**             | 1 827 | 16 - UUID, 255 - username, 255 - email, 20 - phone_number, 255 - password_hash, 255 - avatar_url, 255 - cover_url, 8 - last_online_at, 250 - about, 250 - status, 8 - created_at | 650 млн | 1 106 ГБ |
+| **post**             | 561 | 16 - id, 16 - author_id, 16 - community_id, 250 - content, 255 - video_url, 8 - created_at | 1 500 млрд | 765 ТБ |
+| **friend**           | 40 | 16 - user_id, 16 - friend_id, 8 - created_at  | 650 млн (всего пользователей) * 121,5 (в среднем у пользователя друзей) / 2 = 39 488 млн| 1 471 ГБ |
+| **friend_request**   | 60 | 16 - sender_id, 16 - receiver_id, 20 - status, 8 - sent_at | 650 млн (всего пользователей) * 20 (подписок в среднем у пользователя) = 13 000 млн | 726 ГБ |
+| **friend_request_status** | 270 | 20 - status, 250 - description                         | 3 ("pending", "accepted", "rejected")| 0,8 КБ |
+| **user_activity**    | 90  | 16 - id, 16 - user_id, 50 - activity_type, 8 - created_at  |  |  |
+| **activity_type**    | 300 | 50 - type, 250 - description                            | 3 ("like", "comment", "view") | 0,8 КБ |
+| **community**        | 1 055  | 16 - id, 255 - name, 250 - description, 16 - owner_id, 255 - avatar_url, 255 - cover_url, 8 - created_at | 231 млн | 227 ГБ |
+| **community_member** | 40  | 16 - community_id, 16 - user_id, 8 - joined_at           | 650 млн (всего пользователей) = 121,5 (в среднем подписок на сообщества у пользователя) = 78 975 млн | |
+| **like**             | 56  | 16 - id, 16 - user_id, 16 - post_id, 8 - created_at      | | |
+| **comment**          | 306  | 16 - id, 16 - user_id, 16 - post_id, 250 - content, 8 - created_at | | |
+| **recommendation**   | 60  | 16 - id, 16 - user_id, 16 - post_id, 4 - score, 8 - created_at | | |
+| **photo**            | 311  | 16 - id, 16 - user_id, 16 - post_id, 8 - uploaded_at, 255 - url | | |
 
 ### Требования к консистентности
 
