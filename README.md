@@ -462,6 +462,8 @@
 
 Ссылка на диаграмму: [https://dbdiagram.io/d/67e169ee75d75cc844414647](https://dbdiagram.io/d/67e169ee75d75cc844414647)
 
+![ERD diagram](img/cool_erd.png)
+
 ### Индексы
 
 | Таблица | Индексы                | Пояснение |
