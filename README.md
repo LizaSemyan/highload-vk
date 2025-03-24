@@ -474,6 +474,16 @@
 | like | idx_like_post (post_id) | Оптимизация выборки лайков по посту |
 | comment	| idx_comment_post (post_id) | Ускорение выборки комментариев к постам |
 
+### Денормализация
+
+| Таблица | Поле для денормализации | Источник данных | Цель |
+|---------|-------------------------|-----------------|------|
+| community | members_count | community_member | Быстрый доступ к количеству участников |
+| like | user_username, user_avatar | user | Ускорение отображения лайков |
+| comment | user_username, user_avatar | user | Ускорение отображения комментариев |
+| friend_request | sender_username, receiver_username | user | Упрощение запросов на список запросов в друзья |
+| post | like_count и comment_count | like, comment | Ускорение отображения поста. Ускоряют сортировку по популярности |
+
 ### Выбор СУБД (потаблично)
 
 | Таблица | СУБД | Пояснение |
