@@ -466,10 +466,11 @@
 
 | Таблица | Индексы                | Пояснение |
 |---------|------------------------|-----------|
-| post    | idx_post_author (author_id), idx_post_community (community_id) | Быстрый поиск постов друзей и сообществ |
+| post    | idx_post_author (author_id), idx_post_community (community_id), idx_post_created_at (created_at) | Быстрый поиск постов друзей и сообществ. Быстрая сортировка по дате |
 | friend | idx_friend_user_friend (user_id, friend_id) | Оптимизация поиска друзей |
-| community_member | idx_community_member_user (user_id, community_id) | Быстрое получение сообществ пользователя |
-| user_activity | idx_user_activity_user_post (user_id, post_id), idx_user_activity_user_community (user_id, community_id) | Анализ активности пользователя по постам и сообществам |
+| friend_request | idx_friend_request_status (status) | Быстрая фильтрация по типу заявки в друзья |
+| community_member | idx_community_member_user (user_id, community_id), idx_community_member_community (community_id) | Быстрое получение сообществ пользователя. Быстрый подсчет количества пользователей сообщества |
+| user_activity | idx_user_activity_user_post (user_id, post_id), idx_user_activity_user_community (user_id, community_id), idx_user_activity_type (activity_type) | Анализ активности пользователя по постам и сообществам. Анализ по типам действия |
 | like | idx_like_post (post_id) | Оптимизация выборки лайков по посту |
 | comment	| idx_comment_post (post_id) | Ускорение выборки комментариев к постам |
 
@@ -487,7 +488,8 @@
 | like | Cassandra | Высокая нагрузка на запись, горизонтальное масштабирование |
 | comment | Cassandra | Много данных, частые записи |
 | recommendation | Redis + PostgreSQL | Быстрое хранение персонализированных рекомендаций |
-| photo, video | S3 |	Объектное хранилище |
+| video | PostgreSQL | Надо хранить лишь ссылки на стронний ресурс (vkvideo) |
+| photo | S3 |	Объектное хранилище |
 
 <a name="sources"></a>
 ## Список источников
