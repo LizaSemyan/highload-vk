@@ -460,6 +460,35 @@
 <a name="physical_db"></a>
 ## 6. Физическая схема БД
 
+Ссылка на диаграмму: [https://dbdiagram.io/d/67e169ee75d75cc844414647](https://dbdiagram.io/d/67e169ee75d75cc844414647)
+
+### Индексы
+
+| Таблица | Индексы                | Пояснение |
+|---------|------------------------|-----------|
+| post    | idx_post_author (author_id), idx_post_community (community_id) | Быстрый поиск постов друзей и сообществ |
+| friend | idx_friend_user_friend (user_id, friend_id) | Оптимизация поиска друзей |
+| community_member | idx_community_member_user (user_id, community_id) | Быстрое получение сообществ пользователя |
+| user_activity | idx_user_activity_user_post (user_id, post_id), idx_user_activity_user_community (user_id, community_id) | Анализ активности пользователя по постам и сообществам |
+| like | idx_like_post (post_id) | Оптимизация выборки лайков по посту |
+| comment	| idx_comment_post (post_id) | Ускорение выборки комментариев к постам |
+
+### Выбор СУБД (потаблично)
+
+| Таблица | СУБД | Пояснение |
+|---------|------|-----------|
+| user | PostgreSQL | Транзакции и безопасность |
+| post | Cassandra | Высокая нагрузка на чтение и запись, шардирование |
+| friend | PostgreSQL | Быстрая выборка друзей | 
+| friend_request | PostgreSQL | Требуются транзакции |
+| user_activity | ClickHouse | Логирование действий, аналитика |
+| community	| PostgreSQL | Целостность данных |
+| community_member | PostgreSQL | Быстрые JOIN по сообществам |
+| like | Cassandra | Высокая нагрузка на запись, горизонтальное масштабирование |
+| comment | Cassandra | Много данных, частые записи |
+| recommendation | Redis + PostgreSQL | Быстрое хранение персонализированных рекомендаций |
+| photo, video | S3 |	Объектное хранилище |
+
 <a name="sources"></a>
 ## Список источников
 
