@@ -396,12 +396,12 @@
 | **user_activity**    | 106  | 16 - id, 16 - user_id, 16 - post_id, 50 - activity_type, 8 - created_at  | 342 млрд (в месяц смотрят все пользователи) * 3 (месяца) * 2 (активити) = 2 052 млрд | 198 ТБ |
 | **activity_type**    | 300 | 50 - type, 250 - description                            | 3 ("like", "comment", "view") | 0,8 КБ |
 | **community**        | 1 055  | 16 - id, 255 - name, 250 - description, 16 - owner_id, 255 - avatar_url, 255 - cover_url, 8 - created_at | 230 млн | 226 ГБ |
-| **community_member** | 40  | 16 - community_id, 16 - user_id, 8 - joined_at           | 650 млн (всего пользователей) = 121,5 (в среднем подписок на сообщества у пользователя) = 78 975 млн | |
-| **like**             | 56  | 16 - id, 16 - user_id, 16 - post_id, 8 - created_at      | | |
-| **comment**          | 306  | 16 - id, 16 - user_id, 16 - post_id, 250 - content, 8 - created_at | | |
-| **recommendation**   | 76  | 16 - id, 16 - user_id, 16 - post_id, 16 - user_activity_id, 4 - score, 8 - created_at | | |
-| **video**            | 327 | 16 - id, 16 - user_id, 16 - post_id, 16 - comment_id, 255 - url, 8 - uploaded_at | | |
-| **photo**            | 2 306 872  | 16 - id, 16 - user_id, 16 - post_id, 16 - comment_id, 2 306 800 - content, 8 - uploaded_at | | |
+| **community_member** | 40  | 16 - community_id, 16 - user_id, 8 - joined_at           | 726,39 млн (всего пользователей) * 121,5 (в среднем подписок на сообщества у пользователя) = 88 256,385 млн | 3 288 ГБ |
+| **like**             | 56  | 16 - id, 16 - user_id, 16 - post_id, 8 - created_at      | 1 500 млрд (всего постов) * 100 (в среднем лайков) = 150 000 млрд | 764 ТБ |
+| **comment**          | 306  | 16 - id, 16 - user_id, 16 - post_id, 250 - content, 8 - created_at | 1 500 млрд (всего постов) * 4 (в среднем комментов) = 6 000 млрд | 167 ТБ |
+| **recommendation**   | 76  | 16 - id, 16 - user_id, 16 - post_id, 16 - user_activity_id, 4 - score, 8 - created_at | 2 052 млрд | 142 ТБ |
+| **video**            | 327 | 16 - id, 16 - user_id, 16 - post_id, 16 - comment_id, 255 - url, 8 - uploaded_at | 1 500 млрд (всего постов) * 0,2 (постов с видео) = 300 млрд | 89 ТБ |
+| **photo**            | 2 306 872  | 16 - id, 16 - user_id, 16 - post_id, 16 - comment_id, 2 306 800 - content, 8 - uploaded_at | 1 500 млрд (всего постов) * 0,64 (постов с фото) = 960 млрд | 1967 ПБ |
 
 ### Требования к консистентности
 
