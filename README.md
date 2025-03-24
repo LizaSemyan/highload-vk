@@ -497,8 +497,8 @@
 | community_member | PostgreSQL | Быстрые JOIN по сообществам |
 | like | Cassandra | Высокая нагрузка на запись, горизонтальное масштабирование |
 | comment | Cassandra | Много данных, частые записи |
-| recommendation | Redis + PostgreSQL | Быстрое хранение персонализированных рекомендаций |
-| video | PostgreSQL | Надо хранить лишь ссылки на стронний ресурс (vkvideo) |
+| recommendation | Redis + ClickHouse | Быстрое хранение персонализированных рекомендаций |
+| video | Cassandra | Надо хранить лишь ссылки на сторонний ресурс (vkvideo) |
 | photo | S3 |	Объектное хранилище |
 
 <a name="sources"></a>
