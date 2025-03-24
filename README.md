@@ -492,6 +492,7 @@
 | post | Cassandra | Высокая нагрузка на чтение и запись, шардирование |
 | friend | PostgreSQL | Быстрая выборка друзей | 
 | friend_request | PostgreSQL | Требуются транзакции |
+| friend_request_status | PostgreSQL | Для работы с friend_request |
 | user_activity | ClickHouse | Логирование действий, аналитика |
 | community	| PostgreSQL | Целостность данных |
 | community_member | PostgreSQL | Быстрые JOIN по сообществам |
