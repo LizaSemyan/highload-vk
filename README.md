@@ -393,14 +393,15 @@
 | **friend**           | 40 | 16 - user_id, 16 - friend_id, 8 - created_at  | 650 млн (всего пользователей) * 121,5 (в среднем у пользователя друзей) / 2 = 39 488 млн| 1 471 ГБ |
 | **friend_request**   | 60 | 16 - sender_id, 16 - receiver_id, 20 - status, 8 - sent_at | 650 млн (всего пользователей) * 20 (подписок в среднем у пользователя) = 13 000 млн | 726 ГБ |
 | **friend_request_status** | 270 | 20 - status, 250 - description                         | 3 ("pending", "accepted", "rejected")| 0,8 КБ |
-| **user_activity**    | 90  | 16 - id, 16 - user_id, 50 - activity_type, 8 - created_at  |  |  |
+| **user_activity**    | 106  | 16 - id, 16 - user_id, 16 - post_id, 50 - activity_type, 8 - created_at  |  |  |
 | **activity_type**    | 300 | 50 - type, 250 - description                            | 3 ("like", "comment", "view") | 0,8 КБ |
 | **community**        | 1 055  | 16 - id, 255 - name, 250 - description, 16 - owner_id, 255 - avatar_url, 255 - cover_url, 8 - created_at | 231 млн | 227 ГБ |
 | **community_member** | 40  | 16 - community_id, 16 - user_id, 8 - joined_at           | 650 млн (всего пользователей) = 121,5 (в среднем подписок на сообщества у пользователя) = 78 975 млн | |
 | **like**             | 56  | 16 - id, 16 - user_id, 16 - post_id, 8 - created_at      | | |
 | **comment**          | 306  | 16 - id, 16 - user_id, 16 - post_id, 250 - content, 8 - created_at | | |
-| **recommendation**   | 60  | 16 - id, 16 - user_id, 16 - post_id, 4 - score, 8 - created_at | | |
-| **photo**            | 311  | 16 - id, 16 - user_id, 16 - post_id, 8 - uploaded_at, 255 - url | | |
+| **recommendation**   | 76  | 16 - id, 16 - user_id, 16 - post_id, 16 - user_activity_id, 4 - score, 8 - created_at | | |
+| **video**            | 327 | 16 - id, 16 - user_id, 16 - post_id, 16 - comment_id, 255 - url, 8 - uploaded_at | | |
+| **photo**            | 2 306 872  | 16 - id, 16 - user_id, 16 - post_id, 16 - comment_id, 2 306 800 - content, 8 - uploaded_at | | |
 
 ### Требования к консистентности
 
