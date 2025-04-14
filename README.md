@@ -675,11 +675,11 @@
 |----------------------------|----------------------------------|-----------|
 | Nginx                      |  |  |
 | API Gateway                |  |  |
-| PostgreSQL                 |  |  |
-| Cassandra                  |  |  |
-| ClickHouse                 |  |  |
-| Redis                      |  |  |
-| S3                         |  |  |
+| PostgreSQL                 | Репликация                       |  |
+| Cassandra                  | Репликация                       |  |
+| ClickHouse                 | Репликация                       |  |
+| Redis                      | Репликация                       |  |
+| S3                         | Репликация                       |  |
 | CDN                        |  |  |
 
 <a name="scheme"></a>
