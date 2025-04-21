@@ -688,7 +688,7 @@
 <a name="scheme"></a>
 ## 10. Схема проекта
 
-[![Scheme](img/scheme.drawio.png)]
+![Scheme](img/scheme.drawio.png)
 
 Запросы поступают от:
 
