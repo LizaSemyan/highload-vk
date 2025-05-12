@@ -12,6 +12,7 @@
   ### [9. Обеспечение надежности](#reliability)
   ### [10. Схема проекта](#scheme)
   ### [11. Расчет ресурсов](#resources)
+  ### [Презентация](#presentation)
   ### [Список источников](#sources)
 
 <a name="topic"></a>
@@ -837,6 +838,11 @@ S3 хранилище: 1 967 ПБ, 87 183 RPS. Используется объе
 | clickhouse     | own     | 2x7453/16x32GB/4xNVMe3.84T/2x25Gb/s | 64    | 14  | $210 000 (15 000 * 14)  | $604 800 (14 * 1200 * 36)   |
 | redis          | own     | 1x5318/4x32GB/1xSSD960G/2x25Gb/s    | 32    | 19  | $152 000 (8000 * 19)    | $342 000 (19 * 500 * 36)    |
 | kafka          | own     | 2x6338/8x32GB/2xSSD1.92T/2x25Gb/s   | 64    | 8   | $116 000 (14 500×8)     | $273 600 (8 * 950 * 36)     |
+
+<a name="presentation"></a>
+## Презентация
+
+Ссылка на презентацию: [https://docs.google.com/presentation/d/1OIeRvFSHJZaFHTnL2U7oQ51nuPcgcsOB/edit?usp=sharing&ouid=101615519938645271012&rtpof=true&sd=true](https://docs.google.com/presentation/d/1OIeRvFSHJZaFHTnL2U7oQ51nuPcgcsOB/edit?usp=sharing&ouid=101615519938645271012&rtpof=true&sd=true)
 
 <a name="sources"></a>
 ## Список источников
